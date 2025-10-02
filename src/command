@@ -1,0 +1,28 @@
+from src.preprocessing import load_data, preprocess_data
+from src.modeling import train_model, evaluate_model, save_model
+from src.feature_importance import plot_feature_importance, plot_permutation_importance
+
+def main():
+    # Load & preprocess
+    df = load_data("data/churn.csv")
+    X_train, X_test, y_train, y_test = preprocess_data(df, target_col="Churn")
+
+    # Train
+    model = train_model(X_train, y_train)
+
+    # Evaluate
+    results = evaluate_model(model, X_test, y_test)
+    print("Accuracy:", results["accuracy"])
+    print("Classification Report:", results["report"])
+    print("Confusion Matrix:\n", results["confusion_matrix"])
+
+    # Save model
+    save_model(model, "results/churn_model.pkl")
+
+    # Plot feature importance
+    feature_names = df.drop(columns=["Churn"]).columns
+    plot_feature_importance(model, feature_names, "results/feature_importance.png")
+    plot_permutation_importance(model, X_test, y_test, feature_names, "results/permutation_importance.png")
+
+if __name__ == "__main__":
+    main()
