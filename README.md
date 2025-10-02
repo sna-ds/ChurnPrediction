@@ -138,14 +138,14 @@ The dataset contains customer subscription details, demographics, and billing in
 
 ## 🔍 Feature Importance Insights
 
-![Feature Importance](results/Random Forest Feature Importance.png)
+![Feature Importance](results/Random_Forest_Feature_Importance.png)
 
 - **Contract (~30%)** → the most dominant factor, strongly influencing churn probability.  
 - **Tenure & MonthlyCharges (~20%)** → new customers with higher monthly costs are more likely to churn.  
 - **Dependents, Payment Method (Credit Card), PaperlessBilling (~10%)** → moderate influence.  
 - Other features → minimal impact.  
 
-![Permutation Importance](results/Permutation Importance (Random Forest).png)
+![Permutation Importance](results/Permutation_Importance_(Random_Forest).png)
 
 - Contract dominates significantly compared to other factors, confirming that **contract type is the primary determinant of churn**.
 
