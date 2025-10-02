@@ -129,6 +129,7 @@ The dataset contains customer subscription details, demographics, and billing in
   - FP: 411  
   - TN: 321  
   - FN: 53
+    
   📌 **Insight:**
       - ✅ The model successfully captures the majority of true churners → useful for retention campaigns.  
       - ⚠️ Low precision for churn (44%) → many false positives, meaning higher campaign costs since many “healthy” customers are incorrectly targeted.
@@ -138,15 +139,18 @@ The dataset contains customer subscription details, demographics, and billing in
 ## 🔍 Feature Importance Insights
 
 ![Feature Importance](results/Random Forest Feature Importance.png)
+
 - **Contract (~30%)** → the most dominant factor, strongly influencing churn probability.  
 - **Tenure & MonthlyCharges (~20%)** → new customers with higher monthly costs are more likely to churn.  
 - **Dependents, Payment Method (Credit Card), PaperlessBilling (~10%)** → moderate influence.  
 - Other features → minimal impact.  
 
 ![Permutation Importance](results/Permutation Importance (Random Forest).png)
+
 - Contract dominates significantly compared to other factors, confirming that **contract type is the primary determinant of churn**.
 
 **Business Takeaways:**
+
 The type of customer contract is the strongest driver of churn. Customers on month-to-month contracts are much more likely to leave compared to those with longer-term agreements. This suggests that businesses should focus on promoting longer-term contracts (e.g., 6–12 months) through discounts or added benefits.
 Additionally, new customers with high monthly charges are at higher risk, so onboarding support and targeted retention offers can help reduce early churn. Factors like dependents, billing methods, and paperless billing have moderate influence but are secondary compared to contract and pricing strategy.
 
