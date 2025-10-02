@@ -112,16 +112,17 @@ The dataset contains customer subscription details, demographics, and billing in
 ### 📊 Final Evaluation (Test Set)
 
 - **Classification Report:**
-               precision    recall  f1-score   support
+  ```
+                 precision    recall  f1-score   support
+  
+             0       0.92      0.60      0.73      1033
+             1       0.44      0.86      0.58       374
+  
+      accuracy                           0.67      1407
+     macro avg       0.68      0.73      0.65      1407
+  weighted avg       0.79      0.67      0.69      1407
+  AUC-ROC: 0.8055556993544581
 
-           0       0.92      0.60      0.73      1033
-           1       0.44      0.86      0.58       374
-
-    accuracy                           0.67      1407
-   macro avg       0.68      0.73      0.65      1407
-weighted avg       0.79      0.67      0.69      1407
-
-AUC-ROC: 0.8055556993544581
 
 ![Confusion Matrix](results/confusion_matrix.png)
   - TP: 622  
