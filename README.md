@@ -145,7 +145,7 @@ The dataset contains customer subscription details, demographics, and billing in
 - **Dependents, Payment Method (Credit Card), PaperlessBilling (~10%)** → moderate influence.  
 - Other features → minimal impact.  
 
-![Permutation Importance](results/Permutation_Importance_(Random_Forest).png)
+![Permutation Importance](results/Permutation_Importance_RF.png)
 
 - Contract dominates significantly compared to other factors, confirming that **contract type is the primary determinant of churn**.
 
